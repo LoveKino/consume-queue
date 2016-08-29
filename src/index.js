@@ -23,7 +23,6 @@ let messageQueue = () => {
             };
         },
 
-        // error = {msg, stack}
         consume: ({
             id,
             error,
@@ -31,9 +30,7 @@ let messageQueue = () => {
         }) => {
             let item = queue[id];
             if (error) {
-                let err = new Error(error.msg);
-                err.stack = error.stack;
-                item && item.reject(err);
+                item && item.reject(error);
             } else {
                 item && item.resolve(data);
             }
