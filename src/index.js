@@ -1,20 +1,26 @@
 'use strict';
 
-let idgener = require('idgener');
+let uuidV4 = require('uuid/v4');
+
+/**
+ * a simple message queue
+ */
 
 let messageQueue = () => {
     let queue = {};
 
     return {
         produce: (source) => {
-            let id = idgener();
+            let id = uuidV4();
 
             return {
-                data: {
+                message: {
                     id, source,
                     time: new Date().getTime()
                 },
-                result: new Promise((resolve, reject) => {
+
+                // when message was consumed, will resolve
+                receipt: new Promise((resolve, reject) => {
                     queue[id] = {
                         resolve,
                         reject

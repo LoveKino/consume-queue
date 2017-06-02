@@ -1,6 +1,6 @@
 {
   "name": "consume-queue",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "message queue",
   "main": "index.js",
   "scripts": {
@@ -25,9 +25,19 @@
   "homepage": "https://github.com/LoveKino/consume-queue#readme",
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "mocha": "^3.0.2"
+    "mocha": "^3.0.2",
+    "readme-builder": "0.0.12"
   },
   "dependencies": {
-    "idgener": "0.0.1"
+    "uuid": "^3.0.1"
+  },
+  "readmeDocOptions": {
+    "ignores": [
+       "**/*/node_modules/**/*",
+       "node_modules/**/*",
+       "test/**/*",
+       "example/**/*",
+       "coverage/**/*"
+     ]
   }
 }

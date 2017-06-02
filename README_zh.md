@@ -3,32 +3,32 @@
 [中文文档](./README_zh.md)   [document](./README.md)
 
 message queue
-- [install](#install)
-- [usage](#usage)
-  * [API quick run](#api-quick-run)
-- [develop](#develop)
-  * [file structure](#file-structure)
-  * [run tests](#run-tests)
-- [license](#license)
+- [安装](#%E5%AE%89%E8%A3%85)
+- [使用方法](#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
+  * [API 快速运行](#api-%E5%BF%AB%E9%80%9F%E8%BF%90%E8%A1%8C)
+- [开发](#%E5%BC%80%E5%8F%91)
+  * [文件结构](#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84)
+  * [运行测试用例](#%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B)
+- [许可证](#%E8%AE%B8%E5%8F%AF%E8%AF%81)
 
-## install
+## 安装
 
-`npm i consume-queue --save` or `npm i consume-queue --save-dev`
+`npm i consume-queue --save` 或者 `npm i consume-queue --save-dev`
 
-Install on global, using `npm i consume-queue -g`
-
-
-
-## usage
+全局安装, 使用 `npm i consume-queue -g`
 
 
+
+## 使用方法
 
 
 
 
 
 
-### API quick run
+
+
+### API 快速运行
 
 
 
@@ -48,7 +48,7 @@ receipt.then((ret) => {
 ```
 
 ```
-output
+输出
 
     { id: 'cb0cd4a6-e3f1-47ff-b29b-703bbf123318',
       source: { a: 1 },
@@ -58,9 +58,9 @@ output
 ```
 
 
-## develop
+## 开发
 
-### file structure
+### 文件结构
 
 ```
 .    
@@ -92,11 +92,11 @@ output
 ```
 
 
-### run tests
+### 运行测试用例
 
 `npm test`
 
-## license
+## 许可证
 
 MIT License
 

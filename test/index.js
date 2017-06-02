@@ -10,19 +10,19 @@ describe('index', () => {
         } = messageQueue();
 
         let {
-            result, data
+            message, receipt
         } = produce({
             a: 1
         });
 
         consume({
-            id: data.id,
+            id: message.id,
             data: {
                 b: 2
             }
         });
 
-        return result.then((ret) => {
+        return receipt.then((ret) => {
             assert.deepEqual(ret, {
                 b: 2
             });
@@ -35,17 +35,17 @@ describe('index', () => {
         } = messageQueue();
 
         let {
-            result, data
+            message, receipt
         } = produce({
             a: 1
         });
 
         consume({
-            id: data.id,
+            id: message.id,
             error: new Error('s error')
         });
 
-        result.catch((err) => {
+        receipt.catch((err) => {
             assert.equal(err.toString(), 'Error: s error');
             done();
         });
